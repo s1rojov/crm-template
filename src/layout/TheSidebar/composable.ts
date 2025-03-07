@@ -32,6 +32,7 @@ export function useSidebarFn() {
       icon: 'division',
     },
   ])
+
   return {
     items,
   }

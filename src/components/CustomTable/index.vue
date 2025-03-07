@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md">
+  <div>
     <q-table flat bordered title="Treats" :rows="items" :columns="fields" row-key="name" />
   </div>
 </template>

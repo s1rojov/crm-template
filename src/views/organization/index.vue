@@ -1,6 +1,12 @@
 <template>
   <div>
-    <custom-table :fields="columns" :items="rows"></custom-table>
+    <div class="flex items-center justify-between">
+      <p class="text-lg font-medium">Organization</p>
+      <CustomButton />
+    </div>
+    <div class="doc-table mt-5">
+      <custom-table :fields="columns" :items="rows"></custom-table>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

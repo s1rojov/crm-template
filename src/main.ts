@@ -9,11 +9,14 @@ import 'quasar/src/css/index.sass'
 import App from './App.vue'
 import router from './router'
 
+//global components
 import BaseIcon from '@/components/BaseIcon/index.vue'
+import CustomButton from '@/components/CustomButton/index.vue'
 
 const app = createApp(App)
 
 app.component('BaseIcon', BaseIcon)
+app.component('CustomButton', CustomButton)
 
 app.use(createPinia())
 app.use(Quasar, {
