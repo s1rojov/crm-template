@@ -1,5 +1,5 @@
 <template>
-  <q-btn :color="color" :text-color="textColor" label="Standard" />
+  <q-btn :color="color" :text-color="textColor" :label="label" />
 </template>
 <script setup lang="ts">
 const props = defineProps({
@@ -10,6 +10,10 @@ const props = defineProps({
   textColor: {
     type: String,
     default: 'white',
+  },
+  label: {
+    type: String,
+    default: 'Click',
   },
 })
 </script>

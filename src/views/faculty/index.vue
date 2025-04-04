@@ -2,7 +2,7 @@
   <div>
     <div class="flex items-center justify-between">
       <p class="text-lg font-medium">Faculty</p>
-      <CustomButton />
+      <CustomButton label="Create" />
     </div>
     <div class="doc-table mt-5">
       <custom-table :fields="columns" :items="rows"></custom-table>
@@ -14,32 +14,24 @@ import CustomTable from '@/components/CustomTable/index.vue'
 
 const columns: any = [
   {
-    name: 'name',
-    required: true,
+    field: 'name',
     label: 'Dessert (100g serving)',
     align: 'left',
-    field: (row: any) => row.name,
-    format: (val: any) => `${val}`,
-    sortable: true,
   },
-  { name: 'calories', align: 'center', label: 'Calories', field: 'calories', sortable: true },
-  { name: 'fat', label: 'Fat (g)', field: 'fat', sortable: true },
-  { name: 'carbs', label: 'Carbs (g)', field: 'carbs' },
-  { name: 'protein', label: 'Protein (g)', field: 'protein' },
-  { name: 'sodium', label: 'Sodium (mg)', field: 'sodium' },
+  { align: 'center', label: 'Calories', field: 'calories' },
+  { label: 'Fat (g)', field: 'fat', align: 'center' },
+  { label: 'Carbs (g)', field: 'carbs', align: 'center' },
+  { label: 'Protein (g)', field: 'protein', align: 'center' },
+  { label: 'Sodium (mg)', field: 'sodium', align: 'center' },
   {
-    name: 'calcium',
     label: 'Calcium (%)',
     field: 'calcium',
-    sortable: true,
-    sort: (a: any, b: any) => parseInt(a, 10) - parseInt(b, 10),
+    align: 'center',
   },
   {
-    name: 'iron',
     label: 'Iron (%)',
     field: 'iron',
-    sortable: true,
-    sort: (a: any, b: any) => parseInt(a, 10) - parseInt(b, 10),
+    align: 'center',
   },
 ]
 
